@@ -14,6 +14,9 @@ class DishDetail extends Component{
         if (dish != null) {
             return (
                 <div className='col-12 col-md-5 m-1'>
+                    <div>
+
+                    
                     <Card>
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
                         <CardBody>
@@ -21,6 +24,7 @@ class DishDetail extends Component{
                             <CardText> {dish.description} </CardText>
                         </CardBody>
                     </Card>
+                    </div>
                 </div>   
             );
         }
@@ -43,7 +47,7 @@ class DishDetail extends Component{
                     &nbsp;
                     {new Intl.DateTimeFormat('en-US', {
                         year: 'numeric',
-                        month: 'long',
+                        month: 'short',
                         day: '2-digit'
                     }).format(new Date(comment.date))}
                     </p>
